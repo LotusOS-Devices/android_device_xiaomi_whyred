@@ -28,10 +28,15 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Gapps Include
+TARGET_GAPPS_ARCH := arm64
 
-PRODUCT_NAME := lineage_whyred
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lotus/config/common_full_phone.mk)
+
+PRODUCT_NAME := lotus_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
